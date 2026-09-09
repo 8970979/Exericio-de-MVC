@@ -74,7 +74,7 @@ class Aluno {
     public function mostrarResultado() {
         $media = $this->calcularMedia();
 
-        if ($this->percentualPresenca() < 75) {
+        if ($this->calcularPresenca() < 75) {
             return "Reprovado por falta";
         }
 
@@ -87,7 +87,7 @@ class Aluno {
         return "Aprovado!";
     }
 
-    public function percentualPresenca() {
+    public function calcularPresenca() {
         $totalAulas = 80;
         $aulasPresente = $totalAulas - $this->faltas;
         return ($aulasPresente / $totalAulas) * 100;
