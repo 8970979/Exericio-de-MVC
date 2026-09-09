@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once 'Aluno.php';
+require_once 'Model.php';
 
 $aluno = new Aluno();
 
